@@ -1,0 +1,55 @@
+/* Styles go here */
+
+html, body{
+    height: 100%;
+    overflow:hidden;
+}
+
+#main {
+  height: 100%
+}
+
+.container {
+  height: 90%;
+}
+
+.toolbox {
+  height: 90%;
+}
+.toolbox li {
+  display: inline-block;
+  cursor: move;
+}
+
+.target li {
+  display: inline-block;
+}
+
+.block {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 28px;
+  font-weight: bold;
+  padding: 0 10px;
+  margin: 0 5px;
+}
+
+.over {
+  border: 1px dotted #0092e8;
+  background-color: #00a1ff;
+}
+
+.over-invalid {
+  border: 1px dotted #e56060;
+  background-color: #f9a4a4;
+}
+
+.faded {
+  color: #CCC;
+}
+
+.marginBm {
+  margin-bottom: 10px;
+}

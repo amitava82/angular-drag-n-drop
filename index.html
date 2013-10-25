@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css" />
+    <script src="angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app="app">
+    <div id="main" class="container" ng-controller="AppController">
+      <div class="page-header">
+        <h1>AngularJS Drag-n-Drop</h1>
+      </div>
+      <div class="row container marginBm">
+        <div class="col-sm-10">
+        	<div class="row">
+        	<h3>Drag items from toolbox on right into the placeholder</h3>
+        	</div>
+          <div class="zone-A row marginBm">
+            <div ui-dropable="optionsA" class="block faded pull-left">
+              A
+            </div>
+            <ul class="target list-unstyled">
+              <li class="block" ng-repeat="a in optionsA.data">{{a.name}}</li>
+            </ul>          
+          </div>
+          <div class="zone-B row">
+            <div ui-dropable="optionsB" class="block faded pull-left">
+              B
+            </div>            
+            <ul class="target list-unstyled">
+              <li class="block" ng-repeat="b in optionsB.data">{{b.name}}</li>
+            </ul>
+          </div>
+        </div>	
+        <div class="col-sm-2" style="height:100%">
+          <div class="well well-sm toolbox">
+            <ul class="list-unstyled">
+              <li ui-draggable="tool" class="block" ng-repeat="tool in tools">{{tool.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+<!--       <div class="well">
+    	<p>A: {{optionsA | json}}</p>
+    	<p>B: {{optionsB |json}}</p>
+      </div> -->
+    </div>
+  </body>
+
+</html>
